@@ -5,11 +5,13 @@ using namespace std;
 
 struct feature_data {
 
+
         string feature_name;
         int feature_type_int;
         float feature_type_float;
         string feature_type_string;
         bool feature_type_bool;
+        string active_type;
         vector<string> feature_type_string_vector;
 
     };
