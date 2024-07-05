@@ -35,17 +35,6 @@ print("""struct feature_data {
 
         };
 
-        struct feature_singular
-        {
-        string feature_name;
-        int feature_type_int;
-        float feature_type_float;
-        string feature_type_string;
-        bool feature_type_bool;
-        vector<string> feature_type_string_vector;
-        };
-
-
         struct element
         {
         string elemt_name;
@@ -54,12 +43,12 @@ print("""struct feature_data {
         };""")
 
 
-print("feature_singular feature_singular_temp ;")
+#print("feature_singular feature_singular_temp ;")
 print("feature_data feature_data_temp ;")
-print("vector<feature_singular> feature_singular_v ;")
+#print("vector<feature_singular> feature_singular_v ;")
 print("vector<feature_data> feature_data_v ;")
 print("vector<element> training_data;")
-print("//vector<int>::iterator ptr = feature_data_temp_v.begin() ;")
+#print("//vector<int>::iterator ptr = feature_data_temp_v.begin() ;")
 
 for i in range(88): #0 to 87 
 
@@ -103,7 +92,7 @@ for i in range(88): #0 to 87
                 #print(fields[j]+"_feature.feature_type_bool = true ;")
                 print("feature_data_temp.feature_type_bool = true ;")
 
-        print("feature_singular_temp.feature_name = \""+fields[j]+"\" ;")
+        """print("feature_singular_temp.feature_name = \""+fields[j]+"\" ;")
         if(fields[j]=='animal_name'):
             print("feature_singular_temp.feature_type_string = \""+fields[j]+"\"",";")
         elif(fields[j]=='legs'):
@@ -120,19 +109,12 @@ for i in range(88): #0 to 87
             if(rows[i][j]=='1'):
                 print("feature_singular_temp.feature_type_bool = true ;")
             elif(rows[i][j] == '-1'):
-                print("feature_singular_temp.feature_type_bool = false ;")
+                print("feature_singular_temp.feature_type_bool = false ;")"""
         
 
-        print("//feature_singular_v.push_back(feature_singular_temp) ;")
+        #print("//feature_singular_v.push_back(feature_singular_temp) ;")
         print(f"""
             feature_data_v.push_back(feature_data_temp);
-            //feature_data_v[{j}].feature_name = feature_singular_v[{j}].feature_name ;
-            //feature_data_v[{j}].feature_type_int = feature_singular_v[{j}].feature_type_int;
-            //feature_data_v[{j}].feature_type_float = feature_singular_v[{j}].feature_type_float;
-            //feature_data_v[{j}].feature_type_string = feature_singular_v[{j}].feature_type_string;
-            //feature_data_v[{j}].feature_type_bool = feature_singular_v[{j}].feature_type_bool;
-            //feature_data_v[{j}].feature_type_string_vector = feature_singular_v[{j}].feature_type_string_vector;
-  
               """) 
 
 
@@ -147,11 +129,11 @@ for i in range(88): #0 to 87
         print(rows[i][0]+".is_positive =  false ;")
 
     
-    print("//feature_data_temp.feature_space"," = "+rows[i][0]+".feature_space")
+    #print("//feature_data_temp.feature_space"," = "+rows[i][0]+".feature_space")
     
     print(rows[i][0]+".feature_space.push_back(feature_data_v) ;")
     print("feature_data_v.clear() ;")
-    print("//feature_singular_v.clear() ;")
+    #print("//feature_singular_v.clear() ;")
     print("training_data.push_back("+rows[i][0]+");")
 
 
@@ -184,12 +166,7 @@ print("""
       
       };
       
-        //cout<<training_data[i].feature_space[i][j].feature_name << " ";
-        //cout<<training_data[i].feature_space[i][j].feature_type_int << " " ;
-        //cout<<training_data[i].feature_space[i][j].feature_type_float  << " ";
-        //cout<<training_data[i].feature_space[i][j].feature_type_string  << " ";
-        //cout<<training_data[i].feature_space[i][j].feature_type_bool << "||";
-        //cout<<training_data[i].feature_space[i][j].feature_type_string_vector << "||";      
+           
       
       };
             
